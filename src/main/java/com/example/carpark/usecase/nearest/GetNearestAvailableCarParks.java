@@ -8,7 +8,6 @@ import com.example.carpark.exception.CarParkException;
 import com.example.carpark.usecase.nearest.dto.NearestCarPark;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Optional;
