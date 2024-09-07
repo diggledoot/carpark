@@ -11,10 +11,10 @@
 8. When finished, execute `cleanup.sh`.
 
 # Limitations of the API
-1. You have to be in Singapore.
+1. You have to be in Singapore for it to make sense.
 2. Manual ingestion of the car park availability data.
 3. The CSV file data will be outdated as new car parks are built or torn down.
-4. You need to execute in the order of ingest csv -> pull car park availability data -> query nearest endpoint.
+4. For the API to work properly, you need to execute in the order of ingest csv -> pull car park availability data -> query nearest endpoint.
 
 # Design Decisions
 
