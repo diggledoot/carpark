@@ -14,12 +14,16 @@ public class GetCarParkAvailability {
     private final SgGovService sgGovService;
 
     public void execute() {
-        AvailabilityResponse response = sgGovService.getCarParkAvailability();
-        List<CarParkAvailability> carParkAvailabilityList = response.items().parallelStream()
+        AvailabilityResponse availabilityResponse = sgGovService.getCarParkAvailability();
+        List<CarParkAvailability> carParkAvailabilityList = generateCarParkAvailabilityList(availabilityResponse);
+        carParkAvailabilityList.parallelStream().forEach(carParkAvailabilityRepository::upsert);
+    }
+
+    private List<CarParkAvailability> generateCarParkAvailabilityList(AvailabilityResponse availabilityResponse) {
+        return availabilityResponse.items().parallelStream()
                 .flatMap(item -> item.carParkData().stream())
                 .map(this::mapToCarParkInfo)
                 .toList();
-        carParkAvailabilityList.parallelStream().forEach(carParkAvailabilityRepository::upsert);
     }
 
     private CarParkAvailability mapToCarParkInfo(AvailabilityResponse.CarParkData carParkData) {
