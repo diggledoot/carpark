@@ -35,10 +35,10 @@ public class GetNearestAvailableCarParks {
                 carParkAvailabilityRepository
                         .getAvailableCarParks(generateNearestCarParkNumbersString(nearestCarParks));
 
-        List<CarParkInfo> availableNearestCarParks = getNearestAvailableCarParks(availableCarParks, nearestCarParks);
+        List<CarParkInfo> nearestAvailableCarParks = getNearestAvailableCarParks(availableCarParks, nearestCarParks);
 
         //Build response
-        return availableNearestCarParks.stream()
+        return nearestAvailableCarParks.stream()
                 .map(carParkInfo -> {
                     CarParkAvailability carParkAvailability =
                             getCarParkAvailabilityByNearestCarParkInfo(availableCarParks, carParkInfo);
