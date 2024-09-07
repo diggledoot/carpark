@@ -1,9 +1,8 @@
-package com.example.carpark.usecase;
+package com.example.carpark.usecase.nearest;
 
 import com.example.carpark.data.availability.CarParkAvailabilityRepository;
 import com.example.carpark.data.info.CarParkInfoRepository;
 import com.example.carpark.exception.CarParkException;
-import com.example.carpark.usecase.nearest.GetNearestAvailableCarParks;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
