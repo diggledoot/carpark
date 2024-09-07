@@ -52,4 +52,18 @@ I went with an offline library approach. I added `proj4j`, a coordinate transfor
 
 The ingestion time went from half an hour and more to less than 2 minutes (it felt that way).
 
+---
 
+## Calculating Distances On A Sphere
+
+With data ingestion out of the way, I went to build the endpoint for getting the nearest car park that is available.
+
+I'll be honest here. I used GPT to generate the SQL formula for the geodistance calculation, Haversnine. Manual testing seems to show it working well.
+
+Anyway, I ran into the issue of combining nearest car parks and the car park availability data.
+
+I could have solved this by using JOIN queries for nearest car parks and car park availability.
+
+But for the sake of maintenance, I have both queries separate.
+
+Hence, the code for getting the nearest available car park can seem a little confusing.
