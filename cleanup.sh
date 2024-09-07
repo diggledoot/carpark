@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the volume name
-VOLUME_NAME="carpark_postgres_data"
+VOLUME_NAME="carpark-main_postgres_data"
 IMAGE_NAME="carpark-app-image"
 
 echo "Stopping and removing Docker containers..."
