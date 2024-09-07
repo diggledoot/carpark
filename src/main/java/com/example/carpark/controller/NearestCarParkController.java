@@ -30,8 +30,8 @@ public class NearestCarParkController {
     public ResponseEntity<?> nearest(
             @RequestParam(required = false) @Schema(defaultValue = "1.37326") Double latitude,
             @RequestParam(required = false) @Schema(defaultValue = "103.897") Double longitude,
-            @RequestParam(required = false) Integer page,
-            @RequestParam(required = false) Integer perPage
+            @RequestParam(required = false) @Schema(defaultValue = "1") Integer page,
+            @RequestParam(required = false) @Schema(defaultValue = "3") Integer perPage
     ) {
         List<NearestCarPark> result = getNearestAvailableCarParks.execute(latitude, longitude, page, perPage);
         return new ResponseEntity<>(result, HttpStatus.OK);
