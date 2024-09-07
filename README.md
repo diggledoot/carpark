@@ -18,8 +18,6 @@
 
 # Design Decisions
 
----
-
 ## At Which Point To Ingest CSV Data?
 Initially, I wanted to use Python to ingest the CSV data since the data is static.
 
