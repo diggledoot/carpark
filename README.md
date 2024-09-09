@@ -6,7 +6,7 @@
 3. Have Docker Desktop installed.
 4. Have `run.sh` and `cleanup.sh` be executable.
 5. Execute `run.sh`.
-6. Go to `http://localhost:8080/swagger-ui.html`
+6. Go to `http://localhost:8080/swagger-ui/index.html`
 7. Run car park info ingestion from CSV. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/ingestCarParkInfo) to swagger endpoint.
 8. Run car park availability from provided endpoint. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/pullCarParkAvailability) to swagger endpoint.
 9. To get nearest available car park. Go [here](http://localhost:8080/swagger-ui/index.html#/Car%20Park%20Controller/nearest).
