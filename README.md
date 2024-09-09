@@ -2,7 +2,7 @@
 
 # To Run
 1. Have Java 17 installed.
-2. Have Maven isntalled.
+2. Have Maven installed.
 3. Have Docker Desktop installed.
 4. Have `run.sh` and `cleanup.sh` be executable.
 5. Execute `run.sh`.
