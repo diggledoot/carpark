@@ -1,14 +1,15 @@
 # Car Park Availability API
 
 # To Run
-1. Have Docker Desktop installed.
-2. Have `run.sh` and `cleanup.sh` be executable.
-3. Execute `run.sh`.
-4. Go to `http://localhost:8080/swagger-ui/index.html`
-5. Run car park info ingestion from CSV. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/ingestCarParkInfo) to swagger endpoint.
-6. Run car park availability from provided endpoint. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/pullCarParkAvailability) to swagger endpoint.
-7. To get nearest available car park. Go [here](http://localhost:8080/swagger-ui/index.html#/Car%20Park%20Controller/nearest).
-8. When finished, execute `cleanup.sh`.
+1. Have Java 17 installed locally.
+3. Have Docker Desktop installed.
+4. Have `run.sh` and `cleanup.sh` be executable.
+5. Execute `run.sh`.
+6. Go to `http://localhost:8080/swagger-ui/index.html`
+7. Run car park info ingestion from CSV. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/ingestCarParkInfo) to swagger endpoint.
+8. Run car park availability from provided endpoint. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/pullCarParkAvailability) to swagger endpoint.
+9. To get nearest available car park. Go [here](http://localhost:8080/swagger-ui/index.html#/Car%20Park%20Controller/nearest).
+10. When finished, execute `cleanup.sh`.
 
 # Limitations of the API
 1. You have to be in Singapore for it to make sense.
