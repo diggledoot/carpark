@@ -140,7 +140,6 @@
                     </java>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
