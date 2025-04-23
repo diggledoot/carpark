@@ -1,3 +1,4 @@
+/* (C)2025 */
 package com.example.carpark;
 
 import org.springframework.boot.SpringApplication;
@@ -11,5 +12,4 @@ public class CarparkApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CarparkApplication.class, args);
 	}
-
 }

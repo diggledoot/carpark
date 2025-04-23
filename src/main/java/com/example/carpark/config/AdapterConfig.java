@@ -1,3 +1,4 @@
+/* (C)2025 */
 package com.example.carpark.config;
 
 import com.example.carpark.data.availability.CarParkAvailabilityRepository;
@@ -13,17 +14,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @Configuration
 public class AdapterConfig {
 
-    @Bean
-    public CarParkInfoRepository carParkInfoRepository(
-            JdbcTemplate jdbcTemplate
-    ) {
-        return new CarParkInfoRepositoryImpl(jdbcTemplate, new CarParkInfoRowMapper());
-    }
+	@Bean
+	public CarParkInfoRepository carParkInfoRepository(JdbcTemplate jdbcTemplate) {
+		return new CarParkInfoRepositoryImpl(jdbcTemplate, new CarParkInfoRowMapper());
+	}
 
-    @Bean
-    public CarParkAvailabilityRepository carParkAvailabilityRepository(
-            JdbcTemplate jdbcTemplate
-    ) {
-        return new CarParkAvailabilityRepositoryImpl(jdbcTemplate, new CarParkAvailabilityMapper());
-    }
+	@Bean
+	public CarParkAvailabilityRepository carParkAvailabilityRepository(JdbcTemplate jdbcTemplate) {
+		return new CarParkAvailabilityRepositoryImpl(jdbcTemplate, new CarParkAvailabilityMapper());
+	}
 }

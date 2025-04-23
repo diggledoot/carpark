@@ -1,3 +1,4 @@
+/* (C)2025 */
 package com.example.carpark.config;
 
 import com.example.carpark.externalservice.sggov.SgGovService;
@@ -10,10 +11,8 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class ExternalServiceConfig {
 
-    @Bean
-    public SgGovService sgGovService(
-            @Value("${sg.gov.baseUrl}") String baseUrl
-    ) {
-        return new SgGovServiceImpl(RestClient.create(), baseUrl);
-    }
+	@Bean
+	public SgGovService sgGovService(@Value("${sg.gov.baseUrl}") String baseUrl) {
+		return new SgGovServiceImpl(RestClient.create(), baseUrl);
+	}
 }
