@@ -5,7 +5,7 @@
 2. Have Maven installed.
 3. Have Docker Desktop installed.
 4. Download the project as a zip file.
-5. Have `run.sh` and `cleanup.sh` be executable.
+5. Have `run.sh` and `cleanup.sh` be executable. e.g. `chmod +x ./run.sh ./cleanup.sh`
 6. Execute `run.sh`.
 7. Go to `http://localhost:8080/swagger-ui/index.html`
 8. Run car park info ingestion from CSV. [Link](http://localhost:8080/swagger-ui/index.html#/Data%20Ingestion%20Controller/ingestCarParkInfo) to swagger endpoint.
