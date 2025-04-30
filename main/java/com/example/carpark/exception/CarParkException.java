@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 
 @Getter
 public class CarParkException extends RuntimeException {
-    private HttpStatus httpStatus;
+    private HttpStatus final httpStatus;
 
     public CarParkException(String message, Throwable cause) {
         super(message, cause);
