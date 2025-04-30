@@ -28,8 +28,8 @@ class GetNearestAvailableCarParksTest {
 	@Mock
 	private CarParkInfoRepository carParkInfoRepository;
 
-	private static final Double mockLatitude = 1.37326;
-	private static final Double mockLongitude = 103.897;
+	private static final Double MOCK_LATITUDE = 1.37326;
+	private static final Double MOCK_LONGITUDE = 103.897;
 
 	@Test
 	void testInvalidInputs() {
@@ -38,7 +38,7 @@ class GetNearestAvailableCarParksTest {
 		Integer mockPerPage = 10;
 
 		// Act
-		Executable executable = () -> getNearestAvailableCarParks.execute(null, mockLongitude, mockPage, mockPerPage);
+		Executable executable = () -> getNearestAvailableCarParks.execute(null, MOCK_LONGITUDE, mockPage, mockPerPage);
 
 		// Assert
 		CarParkException exception = Assertions.assertThrows(CarParkException.class, executable);
@@ -52,13 +52,13 @@ class GetNearestAvailableCarParksTest {
 		Integer mockPerPage = 5;
 
 		// Act
-		getNearestAvailableCarParks.execute(mockLatitude, mockLongitude, mockPage, mockPerPage);
+		getNearestAvailableCarParks.execute(MOCK_LATITUDE, MOCK_LONGITUDE, mockPage, mockPerPage);
 
 		// Assert
 		ArgumentCaptor<Integer> pageCaptor = ArgumentCaptor.forClass(Integer.class);
 		ArgumentCaptor<Integer> perPageCaptor = ArgumentCaptor.forClass(Integer.class);
 
-		verify(carParkInfoRepository).nearestCarPark(eq(mockLatitude), eq(mockLongitude), pageCaptor.capture(),
+		verify(carParkInfoRepository).nearestCarPark(eq(MOCK_LATITUDE), eq(MOCK_LONGITUDE), pageCaptor.capture(),
 				perPageCaptor.capture());
 
 		Assertions.assertEquals(10, pageCaptor.getValue());
