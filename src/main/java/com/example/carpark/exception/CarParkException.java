@@ -2,20 +2,18 @@
 package com.example.carpark.exception;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
 @Getter
+@RequiredArgsConstructor
 public class CarParkException extends RuntimeException {
-	private HttpStatus httpStatus;
-
-	public CarParkException(String message, Throwable cause) {
-		super(message, cause);
-	}
+	private final HttpStatus httpStatus;
 
 	public CarParkException(String message, Throwable cause, HttpStatus httpStatus) {
 		super(message, cause);
-		this.httpStatus = httpStatus;
-	}
+        this.httpStatus = httpStatus;
+    }
 
 	public CarParkException(String message, HttpStatus httpStatus) {
 		super(message);
