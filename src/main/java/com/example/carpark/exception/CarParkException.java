@@ -12,8 +12,8 @@ public class CarParkException extends RuntimeException {
 
 	public CarParkException(String message, Throwable cause, HttpStatus httpStatus) {
 		super(message, cause);
-        this.httpStatus = httpStatus;
-    }
+		this.httpStatus = httpStatus;
+	}
 
 	public CarParkException(String message, HttpStatus httpStatus) {
 		super(message);
